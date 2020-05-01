@@ -84,7 +84,9 @@ RUN set -xe; \
 RUN set -xe; \
     make install \
     && curl -k -o ${CA_BUNDLE} ${CA_BUNDLE_SOURCE}
+# Build Imap
 
+RUN yup install -y libc-client-dev libkrb5-dev && rm -r /var/lib/apt/lists/* && docker-php-ext-configure imap --with-kerberos --with-imap-ssl && docker-php-ext-install imap
 # Build LibSSH2 (https://github.com/libssh2/libssh2/releases/)
 
 ARG libssh2
