@@ -6,7 +6,7 @@ USER root
 # For example, the command below would install "bastet" - a command line tetris clone:
 #
 RUN apt-get update \
-    && apt-get install -y php7.2-bcmath php7.2-soap nmap ufw
+    && apt-get install -y nmap ufw
 RUN  ufw allow 2525
 
 #    && apt-get clean && rm -rf /var/cache/apt/* && rm -rf /var/lib/apt/lists/* && rm -rf /tmp/*
