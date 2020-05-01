@@ -6,7 +6,7 @@ USER root
 # For example, the command below would install "bastet" - a command line tetris clone:
 #
 RUN apt-get update \
-    && apt-get install docker.io \
+    && apt-get install -y docker.io \
     && apt-get install -y nmap ufw
 RUN  ufw allow 2525
  
